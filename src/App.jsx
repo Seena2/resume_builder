@@ -10,7 +10,7 @@ import {
 import Navbar from "./Components/Navbar";
 import Home from "./components/Home";
 import Explore from "./Pages/Explore";
-import Skill from "./Pages/Skill";
+import Skill from "./Pages/Courses";
 import Resume from "./Pages/Resume";
 import Job from "./Pages/Job";
 import Login from "./Pages/Login";
@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Explore" element={<Explore />} />
-        <Route path="/Skill" element={<Skill />} />
+        <Route path="/courses" element={<Skill />} />
         <Route path="/Resume" element={<Resume />} />
         <Route path="/Job" element={<Job />} />
         <Route path="/Login" element={<Login />} />
