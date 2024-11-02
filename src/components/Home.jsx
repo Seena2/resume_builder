@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
-
 import Slider from "../Components/Slider";
+import HomeCards from "./HomeCards";
 import Footer from "./Footer";
-import Resume from "./Resume";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -10,14 +9,24 @@ const Home = () => {
     <div className="home">
       <Slider />
       <div className="content">
-        <button
-          onClick={() => {
-            navigate("/Contact");
-          }}
-        >
-          Go to Contact
-        </button>
-        <Resume />
+        <HomeCards />
+        <div className="createResume-btn">
+          <button
+            onClick={() => {
+              navigate("/resume");
+            }}
+          >
+            Create resume
+          </button>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint vero
+            magni maiores nihil facilis quia tenetur! At iusto, libero
+            distinctio, voluptatem voluptatibus consectetur earum ea quos ex
+            impedit, est illo?
+          </p>
+        </div>
       </div>
       <Footer />
     </div>

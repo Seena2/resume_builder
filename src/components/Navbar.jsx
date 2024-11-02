@@ -30,7 +30,7 @@ const Navbar = () => {
           <NavLink to="/job" className="menuLink">
             Job
           </NavLink>
-          <NavLink to="/login" className="nav-login">
+          <NavLink to="/account" className="nav-login">
             Account
           </NavLink>
         </div>

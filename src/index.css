@@ -133,9 +133,52 @@ nav div {
 }
 
 .arrow-btn {
-  width: 2.5rem;
+  width: 2.3rem;
   border-radius: 50%;
   cursor: pointer;
+}
+/* Carrosel pagers*/
+.slider-index ul {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.slider-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #fff;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.slider-dot.green {
+  background-color: green;
+}
+
+.playicon {
+  width: 2rem;
+  border-radius: 50%;
+  gap: 1rem;
+}
+/* Home contents*/
+/*HomeCards */
+.home-cards {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem;
+}
+.home-cards div {
+  border: 1px solid #1544a1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.4rem rgba(92, 92, 92, 0.2);
+}
+.createResume-btn {
+  padding: 2rem;
+  background-color: #dbdcdf;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 .resume {

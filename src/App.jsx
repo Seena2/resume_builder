@@ -11,7 +11,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./components/Home";
 import Explore from "./Pages/Explore";
 import Skill from "./Pages/Courses";
-import Resume from "./Pages/Resume";
+import Resume from "./components/Resume";
 import Job from "./Pages/Job";
 import Login from "./Pages/Login";
 import Contacts from "./Pages/Contacts";
@@ -27,14 +27,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Explore" element={<Explore />} />
         <Route path="/courses" element={<Skill />} />
-        <Route path="/Resume" element={<Resume />} />
-        <Route path="/Job" element={<Job />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Contacts" element={<Contacts />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/job" element={<Job />} />
+        <Route path="/account" element={<Login />} />
+        <Route path="/contacts" element={<Contacts />} />
         <Route path="contacts/:contactId" element={<Contact />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Home />
     </div>
   );
 }
