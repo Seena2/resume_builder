@@ -1,0 +1,11 @@
+1-Make the resume generated on separate blank page when the "Generate resume" button is clicked,
+or automatically genrate when "Finish" button is clicked as an option
+2- when "edit" button is clicked on each section, populate each input field with corresponding data
+so that user can modify/update his input.
+or create one edit button on the generated final resume page to allow user edit whatever he wants
+
+
+//Additional
+//some components are too large make them small, modular and reusable 
+//add more styles to positiona and simplyfy UI for users, like where add button is positioned
+// add new routes for nav menuse using react-router-dom@6.4
