@@ -31,7 +31,6 @@ const Experiance = ({
             <legend>
               <h3>Experience</h3>
             </legend>
-
             <div className="sectionContent">
               <div className="formElements">
                 <label htmlFor="">
