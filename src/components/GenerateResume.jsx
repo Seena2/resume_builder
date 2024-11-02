@@ -1,4 +1,5 @@
 const GenerateResume = ({ resume, setResume }) => {
+  //render the entire resume when the generate resume button is clicked
   return (
     <div className="generate">
       <div className="generated-resume">
