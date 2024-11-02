@@ -186,7 +186,8 @@ const Resume = () => {
   const onSubmit = (data) => {
     setData(data);
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault;
     if (isSubmited) {
       return (
         <div>
@@ -202,7 +203,7 @@ const Resume = () => {
 
   return (
     <div className="resume">
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)} className="form form-large">
         <h1 className="form-title">Resume Builder</h1>
 
         <div className="instructions">
