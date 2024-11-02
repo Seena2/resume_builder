@@ -2,10 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
 }
-.home {
-  background-color: #fff;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+  color: #121212;
+}
+/*Navbar Styling*/
 /*header and Nav*/
 .header {
   background-color: azure;
@@ -14,6 +25,21 @@
   position: sticky;
   top: 0;
 }
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 4rem;
+
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 3px 3px 2px rgba(92, 92, 92, 0.2);
+}
+
 nav {
   display: flex;
   justify-content: space-between;
