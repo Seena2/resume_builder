@@ -30,6 +30,16 @@ const Courses = () => {
     <div>
       <div className="content">
         <h1>I'am from Skill page</h1>
+        <div>
+          <h4>Available Courses</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            saepe magnam quam nobis quasi fugit assumenda dolor soluta cumque,
+            necessitatibus vitae doloremque fugiat, eius ducimus, sapiente
+            distinctio ipsum optio officiis.
+          </p>
+        </div>
+
         <h4>Traffic Light</h4>
         <h1 style={{ color: walk ? "darkgreen" : "darkred" }}>
           {walk ? "Walk" : "Stop"}
