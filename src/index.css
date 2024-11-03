@@ -73,6 +73,9 @@ nav div {
 }
 
 /*Home page*/
+.content {
+  margin: 2rem 3rem;
+}
 /* Carosel Styling */
 
 .hero {
