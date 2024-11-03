@@ -2,40 +2,186 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
 }
-.home {
-  background-color: #fff;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+  color: #121212;
+}
+/*Navbar Styling*/
 /*header and Nav*/
-.header {
-  background-color: azure;
-  padding: 0.7rem;
-  box-shadow: 0 0.2rem 0 rgba(0, 0, 0, 0.1);
-  position: sticky;
+.navbar {
   top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 9999;
+  background-color: azure;
+  padding: 1rem; /* removing add space above the nav*/
+  width: 100%;
+  height: 2.5rem;
+  box-shadow: 3px 3px 2px rgba(92, 92, 92, 0.2);
+  align-items: center;
 }
-nav {
+.nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-}
-nav h1 {
-  margin-left: 3rem;
-  color: #0f48c4;
+  margin-right: 2rem;
 }
 nav div {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
 }
-nav a {
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: #000;
-}
-nav a:hover {
+.nav-logo {
+  font-family: Outfit;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: oblique;
   color: #0f48c4;
+  margin-left: 2.5rem;
+}
+
+.menuLink:hover {
+  color: #1865d8;
   border-bottom: 1px solid #68b5f3;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menulink.active {
+  color: #c05710;
+}
+.nav-login {
+  color: #1865d8;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  border: 2px solid #1865d8;
+  padding: 0.1rem 0.2rem;
+  cursor: pointer;
+}
+.nav-login:hover {
+  background-color: #1865d8;
+  color: white;
+}
+
+/*Home page*/
+.content {
+  margin: 2rem 3rem;
+}
+/* Carosel Styling */
+
+.hero {
+  margin: 0 4rem;
+  position: absolute;
+  top: 12rem;
+}
+
+/* Hero image styling */
+.bgImage {
+  object-fit: cover;
+  width: 100vw;
+  height: 37vw;
+  position: relative;
+  z-index: -1;
+  /*
+  width: 100%;
+  height: 100%;
+  float: left;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  padding: none;
+  object-fit: cover;
+  z-index: -1;
+  */
+}
+.wecome-txt {
+  padding: 0rem;
+}
+.top-text {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 2rem;
+}
+.bottom-text {
+  color: #fff;
+  font-size: 1rem;
+}
+.explore {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: fit-content;
+  margin-top: 1.5rem;
+  padding: 5px 8px;
+  padding-left: 2rem;
+  border-radius: 3rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+.explore p {
+  color: #061b44;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.arrow-btn {
+  width: 2.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* Carrosel pagers*/
+.slider-index ul {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.slider-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #fff;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.slider-dot.green {
+  background-color: green;
+}
+
+.playicon {
+  width: 2rem;
+  border-radius: 50%;
+  gap: 1rem;
+}
+/* Home contents*/
+/*HomeCards */
+.home-cards {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem;
+}
+.home-cards div {
+  border: 1px solid #1544a1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.4rem rgba(92, 92, 92, 0.2);
+}
+.createResume-btn {
+  padding: 2rem;
+  background-color: #dbdcdf;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 .resume {
@@ -43,6 +189,7 @@ nav a:hover {
   width: 90%;
   margin: 0 auto;
 }
+/*Form Styling*/
 .form-title {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -54,7 +201,17 @@ nav a:hover {
 .instructions ul {
   margin-left: 2rem;
 }
-/*Profile Section*/
+fieldset {
+  border-radius: 5px;
+  text-align: left;
+  padding: 1rem;
+}
+legend {
+  padding: 0.3rem;
+  font-size: bold;
+  font-size: 1rem;
+}
+/* Section*/
 .profile,
 .contact,
 .education,
@@ -91,15 +248,22 @@ form {
 .preview-ul {
   margin-left: 2rem;
 }
+label {
+  margin: 1rem auto;
+  display: block;
+  margin: 0 0 1rem 2rem;
+}
 label,
 input,
 textarea {
   display: block;
   width: 95%;
+  font-family: inherit;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.5;
 }
-label {
-  margin: 1rem auto;
-}
+
 input,
 textarea {
   padding: 0.4rem;
@@ -109,6 +273,23 @@ textarea {
 textarea {
   width: 100%;
   height: 6rem;
+}
+textarea:hover,
+input:hover,
+button:hover {
+  box-shadow: 0 0px 3px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+button:active {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+  transform: translateY(1px);
+}
+/* form section toggle between view and hide*/
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
 /*Short Input fields*/
 .smallInputs {

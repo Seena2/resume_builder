@@ -19,87 +19,95 @@ const Contact = ({
       </div>
       {isActive ? (
         <section>
-          <h3>Contact Address</h3>
-          <div className="sectionContent">
-            <div className="formElements">
-              <label htmlFor="">
-                Email
-                <input
-                  type="email"
-                  name=""
-                  id=""
-                  value={profile.email}
-                  onChange={handleEmailChange}
-                  required
-                />
-              </label>
-              <label htmlFor="">
-                Phone No:
-                <input
-                  type="tel"
-                  value={profile.phone}
-                  onChange={handlePhoneChange}
-                  required
-                />
-              </label>
-              <div className="smallInputs">
-                <label htmlFor="">
-                  City:
-                  <input
-                    type="text"
-                    value={profile.city}
-                    onChange={handleCityChange}
-                    required
-                  />
-                </label>
-                <label htmlFor="">
-                  Country:
-                  <input
-                    type="text"
-                    value={profile.country}
-                    onChange={handleCountryChange}
-                    required
-                  />
-                </label>
-              </div>
-            </div>
-            <div className="preview">
-              <div className="preview-display">
-                <h4>Your Contact Address</h4>
-                <p>
-                  {profile.email && (
-                    <span>
-                      Email: <i className="preview-data"> {profile.email}</i>
-                    </span>
-                  )}
-                </p>
-                <p>
-                  {profile.phone && (
-                    <span>
-                      Phone: <i className="preview-data"> {profile.phone}</i>
-                    </span>
-                  )}
-                </p>
-                <p>
-                  {profile.city && (
-                    <span>
-                      City: <i className="preview-data"> {profile.city}</i>
-                    </span>
-                  )}{" "}
-                </p>
-                <p>
-                  {profile.country && (
-                    <span>
-                      Country:{" "}
-                      <i className="preview-data"> {profile.country}</i>
-                    </span>
-                  )}
-                </p>
-              </div>
+          <fieldset>
+            <legend>
+              <h3>Contact Address</h3>
+            </legend>
 
-              <button className="edit-btn">Edit Contact</button>
+            <div className="sectionContent">
+              <div className="formElements">
+                <label htmlFor="">
+                  Email
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="exampe@email.com"
+                    value={profile.email}
+                    onChange={handleEmailChange}
+                    required
+                  />
+                </label>
+                <label htmlFor="">
+                  Phone No:
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phoneNumber"
+                    value={profile.phone}
+                    onChange={handlePhoneChange}
+                    required
+                  />
+                </label>
+                <div className="smallInputs">
+                  <label htmlFor="">
+                    City:
+                    <input
+                      type="text"
+                      value={profile.city}
+                      onChange={handleCityChange}
+                      required
+                    />
+                  </label>
+                  <label htmlFor="">
+                    Country:
+                    <input
+                      type="text"
+                      value={profile.country}
+                      onChange={handleCountryChange}
+                      required
+                    />
+                  </label>
+                </div>
+              </div>
+              <div className="preview">
+                <div className="preview-display">
+                  <h4>Your Contact Address</h4>
+                  <p>
+                    {profile.email && (
+                      <span>
+                        Email: <i className="preview-data"> {profile.email}</i>
+                      </span>
+                    )}
+                  </p>
+                  <p>
+                    {profile.phone && (
+                      <span>
+                        Phone: <i className="preview-data"> {profile.phone}</i>
+                      </span>
+                    )}
+                  </p>
+                  <p>
+                    {profile.city && (
+                      <span>
+                        City: <i className="preview-data"> {profile.city}</i>
+                      </span>
+                    )}{" "}
+                  </p>
+                  <p>
+                    {profile.country && (
+                      <span>
+                        Country:{" "}
+                        <i className="preview-data"> {profile.country}</i>
+                      </span>
+                    )}
+                  </p>
+                </div>
+
+                <button className="edit-btn">Edit Contact</button>
+              </div>
             </div>
-          </div>
+          </fieldset>
           <div className="buttons">
             <button onClick={onPrev} className="btn-prev">
               Previous Section

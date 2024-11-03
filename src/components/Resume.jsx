@@ -18,7 +18,7 @@ const profileData = {
 };
 const educationData = {
   id: "",
-  study: "",
+  study: "", //field of study
   schoolName: "",
   startDate: "",
   endDate: "",
@@ -47,18 +47,46 @@ const Resume = () => {
   const [duty, setDuty] = useState({ id: "", task: "" });
   //store the all work experiance
   const [allExperiance, setAllExperiance] = useState([]);
-
   //state variable to display one section at a time
   const [activeIndex, setActiveIndex] = useState(0);
+  //
+  const [isSubmited, setIsSubmited] = useState(false);
 
   //handler functions
   const handleFullNameChange = (e) => {
+    //you can list all fields as profile.email:profile.resume.email, etc, but we used spread syntax
     setProfile({ ...profile, fullName: e.target.value });
   };
   //Generic handler
   // handleProfileChange = (e) => {
-  //   setProfile({...profile,e.target.name: e.target.value});
+  //note each input should have to have same value for its name attribute as the profile object key
+  //   setProfile({...profile,[e.target.name]: e.target.value,});
   // };
+
+  // //Nested object values,
+  // // const handleSchoolNameChange = (e) => {
+  // //   setResume({
+  // //     ...resume,
+  // //     education: {
+  // //       ...resume.education,
+  // //       schoolName: e.target.value,
+  // //     },
+  // //   });
+  // // };
+
+  // //Experiance
+  // const handleCompanyNameChange = (e) => {
+  //   setResume({
+  //     ...resume,
+  //     experiance: [
+  //       {
+  //         ...resume.experiance,
+  //         company: e.target.value,
+  //       },
+  //     ],
+  //   });
+  // };
+
   const handleProfessionChange = (e) => {
     setProfile({ ...profile, profession: e.target.value });
   };
@@ -142,6 +170,7 @@ const Resume = () => {
     setAllExperiance([...allExperiance, experienceItem]);
     setExperianceItem(experienceData);
   };
+
   //Generate resume
   //Add All resume information to the resume state, so we can able to render the entire data from single source
   const handleFinishResume = (e) => {
@@ -152,9 +181,29 @@ const Resume = () => {
       experience: allExperiance,
     });
   };
+  //Submit form
+
+  const onSubmit = (data) => {
+    setData(data);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault;
+    if (isSubmited) {
+      return (
+        <div>
+          <h1>
+            Resume for {resumeData.firstName} {resumeData.lastName}
+          </h1>
+        </div>
+      );
+      setIsSubmited(true);
+      setResume(resume);
+    }
+  };
+
   return (
     <div className="resume">
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)} className="form form-large">
         <h1 className="form-title">Resume Builder</h1>
 
         <div className="instructions">

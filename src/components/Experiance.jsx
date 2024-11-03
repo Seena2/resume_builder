@@ -27,154 +27,163 @@ const Experiance = ({
       </div>
       {isActive ? (
         <section>
-          <h3>Experience</h3>
-          <div className="sectionContent">
-            <div className="formElements">
-              <label htmlFor="">
-                company name
-                <input
-                  type="text"
-                  value={experienceItem.companyName}
-                  onChange={handleCompanyNameChange}
-                  required
-                />
-              </label>
-              <label htmlFor="">
-                position title
-                <input
-                  type="text"
-                  value={experienceItem.position}
-                  onChange={handlePositionChange}
-                  required
-                />
-              </label>
-              <div className="smallInputs">
+          <fieldset>
+            <legend>
+              <h3>Experience</h3>
+            </legend>
+            <div className="sectionContent">
+              <div className="formElements">
                 <label htmlFor="">
-                  From :
+                  company name
                   <input
-                    type="date"
-                    value={experienceItem.from}
-                    onChange={handleDateFromChange}
+                    type="text"
+                    value={experienceItem.companyName}
+                    onChange={handleCompanyNameChange}
                     required
                   />
                 </label>
                 <label htmlFor="">
-                  Until:
+                  position title
                   <input
-                    type="date"
-                    value={experienceItem.until}
-                    onChange={handleDateUntilChange}
+                    type="text"
+                    value={experienceItem.position}
+                    onChange={handlePositionChange}
                     required
                   />
                 </label>
-              </div>
-              <label htmlFor="">
-                Main responsibilities
-                <textarea value={duty.task} onChange={handleTaskChange} />
-              </label>
-              <div className="additional-data">
-                <button className="btn-task" onClick={handleAddTask}>
-                  Add responsibilities
-                </button>
-              </div>
-              <p className="infoPara">
-                Do you have more experiance to submit? then press the following{" "}
-                <b>"Add"</b> button
-              </p>
-              <div className="additional-data">
-                <button className="add" onClick={handleAddExperiance}>
-                  Add more experiance
-                </button>
-              </div>
-            </div>
-            <div className="preview">
-              <div className="preview-current">
-                <h4>Experiance</h4>
-                <p>
-                  {experienceItem.companyName && (
-                    <span>
-                      Company:{" "}
-                      <i className="preview-data">
-                        {" "}
-                        {experienceItem.companyName}
-                      </i>
-                    </span>
-                  )}
+                <div className="smallInputs">
+                  <label htmlFor="">
+                    From :
+                    <input
+                      type="date"
+                      value={experienceItem.from}
+                      onChange={handleDateFromChange}
+                      required
+                    />
+                  </label>
+                  <label htmlFor="">
+                    Until:
+                    <input
+                      type="date"
+                      value={experienceItem.until}
+                      onChange={handleDateUntilChange}
+                      required
+                    />
+                  </label>
+                </div>
+                <label htmlFor="">
+                  Main responsibilities
+                  <textarea value={duty.task} onChange={handleTaskChange} />
+                </label>
+                <div className="additional-data">
+                  <button className="btn-task" onClick={handleAddTask}>
+                    Add responsibilities
+                  </button>
+                </div>
+                <p className="infoPara">
+                  Do you have more experiance to submit? then press the
+                  following <b>"Add"</b> button
                 </p>
-                <p>
-                  {experienceItem.position && (
-                    <span>
-                      Position:{" "}
-                      <i className="preview-data"> {experienceItem.position}</i>
-                    </span>
-                  )}
-                </p>
-                <p>
-                  {experienceItem.from && (
-                    <span>
-                      From:{" "}
-                      <i className="preview-data"> {experienceItem.from} </i>
-                    </span>
-                  )}
-                </p>
-                <p>
-                  {experienceItem.until && (
-                    <span>
-                      To:{" "}
-                      <i className="preview-data"> {experienceItem.until}</i>
-                    </span>
-                  )}
-                </p>
-                <div>
-                  {experienceItem.responsibilities && (
-                    <span>
-                      Responsibilities:{" "}
-                      <ul className="preview-ul">
-                        {experienceItem.responsibilities.map((item) => (
-                          <li key={item.id}>
-                            <i className="preview-data"> {item.task}</i>
-                          </li>
-                        ))}
-                      </ul>
-                    </span>
-                  )}
+                <div className="additional-data">
+                  <button className="add" onClick={handleAddExperiance}>
+                    Add more experiance
+                  </button>
                 </div>
               </div>
-              <div className="previewDetails">
-                <ul>
-                  {allExperiance.length > 0 &&
-                    allExperiance.map((exp) => (
-                      <div key={exp.id}>
-                        <hr />
-                        <div className="preview2Cols">
-                          <div>
-                            <p>{exp.companyName}</p>
-                            <p>{exp.position}</p>
-                            <p>{exp.from}</p>
-                            <p>{exp.until}</p>
-
+              <div className="preview">
+                <div className="preview-current">
+                  <h4>Experiance</h4>
+                  <p>
+                    {experienceItem.companyName && (
+                      <span>
+                        Company:{" "}
+                        <i className="preview-data">
+                          {" "}
+                          {experienceItem.companyName}
+                        </i>
+                      </span>
+                    )}
+                  </p>
+                  <p>
+                    {experienceItem.position && (
+                      <span>
+                        Position:{" "}
+                        <i className="preview-data">
+                          {" "}
+                          {experienceItem.position}
+                        </i>
+                      </span>
+                    )}
+                  </p>
+                  <p>
+                    {experienceItem.from && (
+                      <span>
+                        From:{" "}
+                        <i className="preview-data"> {experienceItem.from} </i>
+                      </span>
+                    )}
+                  </p>
+                  <p>
+                    {experienceItem.until && (
+                      <span>
+                        To:{" "}
+                        <i className="preview-data"> {experienceItem.until}</i>
+                      </span>
+                    )}
+                  </p>
+                  <div>
+                    {experienceItem.responsibilities && (
+                      <span>
+                        Responsibilities:{" "}
+                        <ul className="preview-ul">
+                          {experienceItem.responsibilities.map((item) => (
+                            <li key={item.id}>
+                              <i className="preview-data"> {item.task}</i>
+                            </li>
+                          ))}
+                        </ul>
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div className="previewDetails">
+                  <ul>
+                    {allExperiance.length > 0 &&
+                      allExperiance.map((exp) => (
+                        <div key={exp.id}>
+                          <hr />
+                          <div className="preview2Cols">
                             <div>
-                              Responsibilities:{" "}
-                              <ul className="preview-ul">
-                                {exp.responsibilities.map((item) => (
-                                  <li key={item.id}>
-                                    <i className="preview-data"> {item.task}</i>
-                                  </li>
-                                ))}
-                              </ul>
+                              <p>{exp.companyName}</p>
+                              <p>{exp.position}</p>
+                              <p>{exp.from}</p>
+                              <p>{exp.until}</p>
+
+                              <div>
+                                Responsibilities:{" "}
+                                <ul className="preview-ul">
+                                  {exp.responsibilities.map((item) => (
+                                    <li key={item.id}>
+                                      <i className="preview-data">
+                                        {" "}
+                                        {item.task}
+                                      </i>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                            <div>
+                              <button className="edit-btn">Edit </button>
                             </div>
                           </div>
-                          <div>
-                            <button className="edit-btn">Edit </button>
-                          </div>
                         </div>
-                      </div>
-                    ))}
-                </ul>
+                      ))}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-
+          </fieldset>
           <div className="buttons">
             <button onClick={onPrev} className="btn-prev">
               Previous Section
